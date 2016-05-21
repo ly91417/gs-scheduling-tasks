@@ -1,4 +1,4 @@
-package main.java.hello;
+package hello;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +11,7 @@ public class ScheduledTasks {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-    @Scheduled(fixedRate = "*/3 * * * * *")
+    @Scheduled(fixedRate = 3000)
     public void reportCurrentTime() {
         System.out.println("The time is now " + dateFormat.format(new Date()));
     }
